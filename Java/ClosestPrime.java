@@ -14,14 +14,23 @@ class ClosestPrime {
     int i=0;
     while(true){
       if(Prime(n+i)){
-        System.out.println(Prime(n+i));
+        System.out.println(n+i);
         break;
       }
       if(Prime(n-i)){
-        System.out.println(Prime(n-i));
+        System.out.println(n-i);
         break;
       }
       i++;
     }
   }
+   public boolean Prime(int n){
+      for(int i=2;i<n/2;i++){
+         if(n%i==0){
+            return false;
+         }
+      }
+      return true;
+   }
+}
   
